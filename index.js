@@ -17,12 +17,7 @@ const client = new Client({ intents: [
 	GatewayIntentBits.GuildVoiceStates,
 ] });
 
-const player = new Player(client, {
-	ytdlOptions: {
-		quality: 'highestaudio',
-		highWaterMark: 1 << 25,
-	},
-});
+const player = new Player(client);
 
 const commands = [];
 client.commands = new Collection();
