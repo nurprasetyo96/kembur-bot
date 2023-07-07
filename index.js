@@ -1,4 +1,4 @@
-const { Client, GatewayIntentBits, Collection, Events } = require('discord.js');
+const { Client, GatewayIntentBits, Collection, Events, ActivityType } = require('discord.js');
 const dotenv = require('dotenv');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
@@ -129,7 +129,7 @@ client.once(Events.ClientReady, c => {
 });
 
 client.on('ready', function() {
-	client.user.setActivity('Mobile Legends', { type: 'PLAYING' });
+	client.user.setActivity('Mobile Legends', { type: ActivityType.Playing });
 });
 
 client.login(token);
